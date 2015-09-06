@@ -1,5 +1,5 @@
 function sumArray (array) {
-
+  // finds the largest sum of a contigigous string of numbers in an array
   var largeSums = [];
   var largest = array[0];
   for (var i = 0; i < array.length; i++){
