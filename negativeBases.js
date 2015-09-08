@@ -34,6 +34,6 @@ function countInBase(n) {
       console.log(result);
     }
   } else {
-    //write this later
+    // deal with a negative base
   }
 }
