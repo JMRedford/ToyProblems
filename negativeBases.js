@@ -14,7 +14,17 @@ function countInBase(n) {
       n = letterValues[n];
     }
   } 
-  if (n > 0) {
+  if (n === 0 || n === -1){
+    console.log('base '+n+' is not defined');
+  }
+  if (n === 1){
+    var current = ''
+    for (var i = 0; i < 100; i++){
+      console.log(current);
+      current += '1'
+    }
+  }
+  if (n > 1) {
     var log = Math.log(n);
     for (var i = 0; i < 100; i++){
       var result = '';
@@ -35,5 +45,21 @@ function countInBase(n) {
     }
   } else {
     // deal with a negative base
+    for (var i = 1; i < 100; i++){
+      var num = i;
+      var result = '';
+      while (num !== 0){
+        if (num > 0){
+          var div = (num/n)|0
+          var mod = num%n;
+        } else {
+          var div = (num/n)|0 + 1;
+          var mod = num%n - n;
+        }
+        result = mod + result;
+        num = div; 
+      }
+      console.log(result);
+    }
   }
 }
