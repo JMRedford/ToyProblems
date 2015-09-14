@@ -1,3 +1,6 @@
+// the function permutationNumber takes a string and outputs
+// its position in the ordered list of all permutations of the string
+
 var bang = function(num){
   var memory = [1];
   if (memory[num]) return memory[num];
