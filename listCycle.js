@@ -1,5 +1,4 @@
 var hasCycle = function(linkedList){
-  //Your beautiful code here
   var tortoise = linkedList;
   var hare = linkedList.next;
   var tort = false;

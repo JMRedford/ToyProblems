@@ -27,8 +27,6 @@ function isBalanced (str) {
         openSquareCount--;
         break;
     }
-  // Write your code here, and
-  // return your final answer.
   }
   if (openCurlyCount === 0 && openSquareCount === 0 && openParenCount === 0) return true;
   else return false;
