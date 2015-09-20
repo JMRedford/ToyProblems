@@ -1,4 +1,5 @@
 function isBalanced (str) {
+  // take a sequence of parens, square, and curly brackets and return wether it is ballanced
   var openParenCount  = 0;
   var openCurlyCount  = 0;
   var openSquareCount = 0;
