@@ -18,10 +18,10 @@ function QuadTree(levels, xStart, xEnd, yStart, yEnd, parentTree){
   }
   if (levels > 1) {
     this.isLeaf = false;
-    this.children[0][0] = new QuadTree(levels - 1, xStart, parseInt((xStart + xEnd)/2), yStart, parseInt((yStart + yEnd)/2));
-    this.children[0][1] = new QuadTree(levels - 1, parseInt((xStart + xEnd)/2), xEnd, yStart, parseInt((yStart + yEnd)/2));
-    this.children[1][0] = new QuadTree(levels - 1, xStart, parseInt((xStart + xEnd)/2), parseInt((yStart + yEnd)/2), yEnd);
-    this.children[1][1] = new QuadTree(levels - 1, parseInt((xStart + xEnd)/2), xEnd, parseInt((yStart + yEnd)/2), yEnd);
+    this.children[0][0] = new QuadTree(levels - 1, xStart, parseInt((xStart + xEnd)/2), yStart, parseInt((yStart + yEnd)/2), this);
+    this.children[0][1] = new QuadTree(levels - 1, parseInt((xStart + xEnd)/2), xEnd, yStart, parseInt((yStart + yEnd)/2), this);
+    this.children[1][0] = new QuadTree(levels - 1, xStart, parseInt((xStart + xEnd)/2), parseInt((yStart + yEnd)/2), yEnd, this);
+    this.children[1][1] = new QuadTree(levels - 1, parseInt((xStart + xEnd)/2), xEnd, parseInt((yStart + yEnd)/2), yEnd, this);
   } else {
     this.isLeaf = true;
     this.things = [];
